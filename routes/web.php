@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PetController::class, "index"]);
 Route::get('/create', [PetController::class, "create"]);
 Route::get('/show_pet/{id}',[PetController::class, "show"]);
-
+Route::get('/edit_pet/{id}',[PetController::class, "edit"]);
 
 Route::post('/add_pet', [PetController::class, "store"]);
+Route::post('/delete_pet/{id}', [PetController::class, "destroy"]);
+Route::post('/update_pet/{id}', [PetController::class, "update"]);
